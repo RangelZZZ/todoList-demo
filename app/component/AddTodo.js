@@ -5,6 +5,7 @@ export class AddTodo extends React.Component {
     addTodo() {
         const text = this.textInput.value;
         this.props.addTodo(text);
+        this.textInput.value = "";
     }
 
     render() {

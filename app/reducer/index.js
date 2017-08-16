@@ -10,6 +10,12 @@ export default function reducer(state = {todoList: []}, action) {
             return [...state];
         }
 
+        case "DELETE": {
+            state.splice(action.index, 1);
+
+            return [...state];
+        }
+
         default: {
             return [...state];
         }
