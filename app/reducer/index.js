@@ -4,7 +4,14 @@ export default function reducer(state = {todoList: []}, action) {
             return [...state, {value: action.text, completed: false}];
         }
 
-        default:
+        case "TOGGLE": {
+            const todo = state.find(element => state.indexOf(element) === action.text);
+            todo.completed = !todo.completed;
             return [...state];
+        }
+
+        default: {
+            return [...state];
+        }
     }
 }
