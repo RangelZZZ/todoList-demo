@@ -1,13 +1,10 @@
-export default function reducer(state = {todolist: []}, action) {
-    console.log("into reducer");
+export default function reducer(state = {todoList: []}, action) {
     switch (action.type) {
         case "ADD": {
-            state.todolist.push({value: action.text, completed: false});
-            console.log(state.todolist);
-            return state;
+            return [...state, {value: action.text, completed: false}];
         }
 
         default:
-            return state;
+            return [...state];
     }
 }

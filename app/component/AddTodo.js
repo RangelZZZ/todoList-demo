@@ -1,4 +1,4 @@
-import React, {component, PropType} from "react";
+import React, {Component, PropType} from "react";
 
 export class AddTodo extends React.Component {
 

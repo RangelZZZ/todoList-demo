@@ -1,14 +1,14 @@
 import React, {component} from "react";
-import AddTodo from "./container/AddTodo";
 import {render} from 'react-dom';
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import reducer from "./reducer/index";
+import App from "./container/App";
 
 const store = createStore(reducer);
 
 render(
     <Provider store={store}>
-        <AddTodo/>
+        <App/>
     </Provider>, document.getElementById("root"));
 

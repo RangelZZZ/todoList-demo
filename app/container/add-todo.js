@@ -5,7 +5,6 @@ import {addTodoList} from "../action/add-todo";
 const mapDispatchToprops = dispatch => {
     return {
         addTodo: text => {
-            console.log("into mapDispatchTop");
             dispatch(addTodoList(text));
         }
     }
