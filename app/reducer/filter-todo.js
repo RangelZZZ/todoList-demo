@@ -3,7 +3,6 @@ export default function filterTodos(state = {filterName: "ALL"}, action) {
     switch (action.type) {
         case "SET_FILTER": {
             state.filterName = action.filterName;
-            return [];
         }
 
         default: {
