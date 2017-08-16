@@ -1,7 +1,16 @@
 import {connect} from "react-redux";
 import {Footer} from "../component/Footer";
-// import {addTodoList} from "../action/add-todo";
+import {filter} from "../action/footer";
+
+
+const mapDisPatchToProps = (dispatch) => {
+    return {
+        onFilter: (filterName) => {
+            dispatch(filter(filterName));
+        }
+    }
+};
 
 export  default connect(() => {
     return {}
-})(Footer)
+}, mapDisPatchToProps)(Footer)
