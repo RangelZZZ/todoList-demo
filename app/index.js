@@ -1,13 +1,14 @@
-import React, {component, PropType} from "react";
-import ReactDOM from "react-dom";
-import {AddTodo} from "./component/AddTodo";
+import React, {component} from "react";
+import AddTodo from "./container/AddTodo";
+import {render} from 'react-dom';
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import reducer from "./reducer/index";
 
-export class App extends React.Component {
-    render() {
-        return <div>
-            <AddTodo/>
-        </div>
-    }
-}
+const store = createStore(reducer);
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+render(
+    <Provider store={store}>
+        <AddTodo/>
+    </Provider>, document.getElementById("root"));
+
