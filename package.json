@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "server": "node server.js",
-    "build": "npm run clean && NODE_ENV=development webpack --config webpack.config.js"
+    "build": "npm run clean && NODE_ENV=development webpack --config webpack.config.js",
+    "wpw": "webpack -w"
   },
   "repository": {
     "type": "git",
